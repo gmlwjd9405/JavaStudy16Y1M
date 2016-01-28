@@ -10,7 +10,7 @@ public class ProblemOC_4 extends Problem {
 		int playerNum = s.nextInt();
 		Player player[] = new Player[playerNum];
 		// 플레이어 레퍼런스 배열을 생성
-
+		Player temp = new Player();
 		for (int i = 0; i < playerNum; i++) {
 			System.out.print("참가자의 이름은 입력하세요>> ");
 			// 플레이어 레퍼런스 객체를 생성
@@ -37,26 +37,22 @@ public class ProblemOC_4 extends Problem {
 				}
 
 			} else {
-				if (player[j].succeed(player[i].inputWord) == false) {
-					System.out.println(player[j].name + "가 졌습니다.");
+				if (player[i].succeed(player[j].inputWord) == false) {
+					System.out.println(player[i].name + "가 졌습니다.");
 					break;
 				}
 			}
 
 			i++;
 			if (i == 1) {
-				j = 2;
-			} else if (i == 2) {
 				j = 0;
+			} else if (i == 2) {
+				j = 1;
 			} else {// i == 3
 				i = 0;
-				j = 1;
+				j = 2;
 			}
 		}
-		// i = -1 이면 비교할 단어는 "아버지"
-		// i = 0 이면 player[1].inputWord과 비교
-		// i = 1이면 player[2].inputWord
-		// i = 2이면 player[0].inputWord
 	}
 
 }
