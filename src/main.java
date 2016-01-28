@@ -13,6 +13,9 @@ public class main {
 			case "2-1":
 				problem = new Problem2_1();
 				break;
+			case "2-2":
+				problem = new Problem2_2();
+				break;
 			default :
 				problem =  new ProblemErr();
 				break;	
