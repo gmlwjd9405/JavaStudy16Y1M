@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Problem2_1 extends Problem {
 	@Override

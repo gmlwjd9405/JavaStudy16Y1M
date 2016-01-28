@@ -1,4 +1,3 @@
-
 public class ProblemErr extends Problem {
 
 	@Override
